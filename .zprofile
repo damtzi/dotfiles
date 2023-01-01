@@ -8,9 +8,5 @@ eval $(/opt/homebrew/bin/brew shellenv)
 PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
 export PATH
 
-
-# Added by Toolbox App
-export PATH="$PATH:/Users/damiantziamtzis/Library/Application Support/JetBrains/Toolbox/scripts"
-
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zprofile.post.zsh" ]] && builtin source "$HOME/.fig/shell/zprofile.post.zsh"
