@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/damiantziamtzis/.oh-my-zsh"
+export ZSH="/Users/damitzi/.oh-my-zsh"
 
 # Disable oh-my-zsh theme (using Starship instead)
 ZSH_THEME=""
@@ -74,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/Users/damiantziamtzis/Library/pnpm"
+export PNPM_HOME="/Users/damitzi/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # bun
@@ -89,13 +89,13 @@ fi
 
 # ===== Shell Completions =====
 # bun
-[ -s "/Users/damiantziamtzis/.bun/_bun" ] && source "/Users/damiantziamtzis/.bun/_bun"
+[ -s "/Users/damitzi/.bun/_bun" ] && source "/Users/damitzi/.bun/_bun"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # deno
-. "/Users/damiantziamtzis/.deno/env"
+. "/Users/damitzi/.deno/env"
 
 # kiro
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
