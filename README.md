@@ -101,13 +101,31 @@ cat ~/.ssh/id_ed25519.pub
 # Copy and add to https://github.com/settings/keys
 ```
 
-### 4. Configure GitHub CLI
+### 4. Verify GPG Signing (Optional)
+
+GPG commit signing is enabled by default. The `gpg-agent` oh-my-zsh plugin handles `GPG_TTY` setup automatically.
+
+```bash
+# Verify your GPG key is available
+gpg --list-secret-keys --keyid-format=long
+
+# Test signing (should prompt for passphrase)
+echo "test" | gpg --clearsign
+```
+
+If you don't have a GPG key, you can disable signing in `~/.gitconfig.local`:
+```ini
+[commit]
+    gpgsign = false
+```
+
+### 5. Configure GitHub CLI
 
 ```bash
 gh auth login
 ```
 
-### 5. Restart Shell
+### 6. Restart Shell
 
 ```bash
 source ~/.zshrc
@@ -194,13 +212,13 @@ Templates are provided in the repo (`.example` files).
 
 ## Key Technologies
 
-- **Shell**: zsh with oh-my-zsh
+- **Shell**: zsh with oh-my-zsh (git, zsh-syntax-highlighting, zsh-autosuggestions, gpg-agent)
 - **Prompt**: Starship (for Warp)
 - **Terminal**: Warp (primary), Ghostty (backup)
 - **Editor**: Zed
 - **AI Agent**: OpenCode
 - **Package Manager**: Homebrew, pnpm
-- **Version Control**: Git with GPG signing
+- **Version Control**: Git with GPG signing via pinentry-mac
 
 ## License
 
