@@ -82,8 +82,6 @@ brew "sergiobenitez/osxct/x86_64-unknown-linux-gnu"
 brew "supabase/tap/supabase"
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
-# Agent-centric IDE with spec-driven development
-cask "kiro"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Control your tools with a few keystrokes

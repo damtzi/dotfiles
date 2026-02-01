@@ -65,7 +65,7 @@ precmd() {
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Oh-my-zsh plugins
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
