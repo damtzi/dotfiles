@@ -1,0 +1,10 @@
+# NPM Configuration Template
+# Copy this to ~/.npmrc and add your auth token
+
+registry=https://registry.npmjs.org/
+
+# Uncomment and add your NPM auth token if needed:
+# //registry.npmjs.org/:_authToken=YOUR_TOKEN_HERE
+
+# Uncomment and add your local registry auth token if needed:
+# //localhost:4873/:_authToken=YOUR_LOCAL_TOKEN_HERE

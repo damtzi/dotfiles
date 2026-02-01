@@ -1,0 +1,23 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+
+# OKE GitHub account
+Host github.com-oke
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_oke
+  IdentitiesOnly yes
+  AddKeysToAgent yes
+
+Host github.com-personal
+  HostName github.com
+  User git
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+
+# Fig ssh integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh

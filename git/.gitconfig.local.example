@@ -1,0 +1,10 @@
+# Local Git Configuration (DO NOT COMMIT THIS FILE)
+# Copy this to ~/.gitconfig.local and fill in your details
+
+[user]
+	email = your.email@example.com
+	name = Your Name
+	signingkey = YOUR_GPG_KEY_ID
+
+[credential]
+	helper = osxkeychain

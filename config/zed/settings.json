@@ -1,0 +1,141 @@
+{
+    "disable_ai": false,
+    "project_panel": {
+        "dock": "right",
+    },
+    "agent": {
+        "dock": "left",
+        "always_allow_tool_actions": true,
+        "default_profile": "write",
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4.5",
+        },
+    },
+    "agent_servers": {
+        "OpenCode": {
+            "type": "custom",
+            "command": "opencode",
+            "args": ["acp"],
+        },
+    },
+    "theme": {
+        "mode": "system",
+        "dark": "Cobalt",
+        "light": "One Light",
+    },
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 1000,
+        },
+    },
+    "format_on_save": "on",
+    "tab_size": 4,
+    "buffer_font_family": ".ZedMono",
+    "buffer_font_size": 13.0,
+    "git": {
+        "git_gutter": "tracked_files",
+    },
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
+    "scrollbar": {
+        "show": "auto",
+        "git_diff": true,
+    },
+    "tabs": {
+        "close_position": "right",
+        "file_icons": true,
+        "git_status": true,
+        "show_diagnostics": "all",
+    },
+    "features": {
+        "edit_prediction_provider": "copilot",
+    },
+    "lsp": {
+        "eslint": {
+            "settings": {
+                "problems": {
+                    "shortenToSingleLine": true,
+                },
+            },
+        },
+        "tailwindcss-language-server": {
+            "settings": {
+                "classAttributes": ["class", "className", "ngClass", "styles"],
+            },
+        },
+        "rust-analyzer": {
+            "initialization_options": {
+                "checkOnSave": {
+                    "command": "clippy",
+                },
+            },
+        },
+    },
+    "languages": {
+        "JSON": {
+            "tab_size": 4,
+        },
+        "Astro": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+            "prettier": { "allowed": false },
+            "language_servers": ["vtsls", "eslint"],
+        },
+        "JavaScript": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+            "prettier": { "allowed": true },
+            "language_servers": ["vtsls", "eslint"],
+        },
+        "TypeScript": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+            "prettier": { "allowed": true },
+            "language_servers": ["vtsls", "eslint"],
+        },
+        "TSX": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+            "prettier": { "allowed": true },
+            "language_servers": [
+                "vtsls",
+                "eslint",
+                "tailwindcss-language-server",
+            ],
+        },
+        "Svelte": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+            "prettier": { "allowed": true },
+            "language_servers": [
+                "eslint",
+                "tailwindcss-language-server",
+                "svelte-language-server",
+            ],
+        },
+        "Rust": {
+            "language_servers": ["rustc", "rust-analyzer"],
+            "formatter": "language_server",
+        },
+    },
+    // "languages": {
+    //     "TSX": {
+    //         "code_actions_on_format": {
+    //             "source.fixAll.eslint": true
+    //         },
+    //         "formatter": {
+    //             "external": {
+    //                 "command": "node_modules/.bin/prettier",
+    //                 "arguments": ["--stdin-filepath", "{buffer_path}"]
+    //             }
+    //         }
+    //     }
+}
