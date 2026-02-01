@@ -1,0 +1,21 @@
+# color scheme
+theme = Cobalt2
+background-opacity = 1
+
+# font
+font-family = "FiraCode Nerd Font Mono"
+font-size = 13
+
+# cursor
+cursor-style = underline
+cursor-color = #ffffff
+cursor-text = #ffffff
+cursor-opacity = 1
+cursor-style-blink = true
+
+# title bar
+macos-titlebar-style = tabs
+
+# shell
+shell-integration = none
+shell-integration-features = title
