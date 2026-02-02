@@ -26,7 +26,8 @@ Personal dotfiles for macOS, managed with automated setup scripts.
 ### Applications
 - **Zed** - Editor settings with LSP, formatter, agent config
 - **OpenCode** - AI agent config with custom instructions and skills
-- **Ghostty** - Terminal emulator config
+- **Warp** - Terminal emulator with keybindings, launch configs, and custom themes
+- **Ghostty** - Terminal emulator config (backup)
 - **Brewfile** - 67+ packages, casks, and VSCode extensions
 
 ## Prerequisites
@@ -141,6 +142,7 @@ source ~/.zshrc
 ├── config/             # XDG configs
 │   ├── zed/           # Zed editor settings
 │   ├── opencode/      # OpenCode AI agent config
+│   ├── warp/          # Warp terminal config (keybindings, launch configs, themes)
 │   ├── ghostty/       # Ghostty terminal config
 │   ├── gh/            # GitHub CLI config
 │   ├── starship.toml  # Starship prompt config

@@ -62,6 +62,9 @@ link_file "$DOTFILES_DIR/config/opencode" "$HOME/.config/opencode"
 # GitHub CLI
 link_file "$DOTFILES_DIR/config/gh" "$HOME/.config/gh"
 
+# Warp
+link_file "$DOTFILES_DIR/config/warp" "$HOME/.warp"
+
 # SSH config
 log_header "SSH Configuration"
 link_file "$DOTFILES_DIR/config/ssh_config" "$HOME/.ssh/config"
