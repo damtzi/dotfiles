@@ -13,7 +13,12 @@
         },
         "medusa": {
             "type": "remote",
-            "url": "https://docs.medusajs.com/mcp"
+            "url": "https://docs.medusajs.com/mcp",
+            "enabled": false
+        },
+        "chrome-devtools": {
+            "type": "local",
+            "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
         }
     }
 }
