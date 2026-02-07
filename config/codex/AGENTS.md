@@ -1,0 +1,1 @@
+/Users/damitzi/.dotfiles/config/opencode/AGENTS.md
