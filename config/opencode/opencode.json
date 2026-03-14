@@ -9,7 +9,8 @@
     "mcp": {
         "context7": {
             "type": "remote",
-            "url": "https://mcp.context7.com/mcp"
+            "url": "https://mcp.context7.com/mcp",
+            "enabled": false
         },
         "medusa": {
             "type": "remote",
@@ -18,7 +19,8 @@
         },
         "chrome-devtools": {
             "type": "local",
-            "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+            "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
+            "enabled": false
         }
     }
 }
