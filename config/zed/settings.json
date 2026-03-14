@@ -1,11 +1,13 @@
 {
+    "edit_predictions": {
+        "provider": "zed",
+    },
     "disable_ai": false,
     "project_panel": {
         "dock": "right",
     },
     "agent": {
         "dock": "left",
-        "always_allow_tool_actions": true,
         "default_profile": "write",
         "default_model": {
             "provider": "copilot_chat",
@@ -49,9 +51,6 @@
         "file_icons": true,
         "git_status": true,
         "show_diagnostics": "all",
-    },
-    "features": {
-        "edit_prediction_provider": "copilot",
     },
     "lsp": {
         "eslint": {
