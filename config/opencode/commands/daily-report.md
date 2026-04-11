@@ -11,11 +11,11 @@ If `$ARGUMENTS` is empty or blank, target today's date. Otherwise parse the prov
 
 ## Git commits for the target date:
 
-!`if [ -n "$ARGUMENTS" ]; then git log --all --after="$ARGUMENTS 00:00" --before="$ARGUMENTS 23:59" --format="%h %s" --no-merges; else git log --all --since=midnight --format="%h %s" --no-merges; fi`
+!`if [ -n "$ARGUMENTS" ]; then git log --all --author="Damian Tziamtzis" --after="$ARGUMENTS 00:00" --before="$ARGUMENTS 23:59" --format="%h %s" --no-merges; else git log --all --author="Damian Tziamtzis" --since=midnight --format="%h %s" --no-merges; fi`
 
 ## Changed files for the target date:
 
-!`if [ -n "$ARGUMENTS" ]; then FIRST=$(git log --all --after="$ARGUMENTS 00:00" --before="$ARGUMENTS 23:59" --format=%H --no-merges | tail -1); LAST=$(git log --all --after="$ARGUMENTS 00:00" --before="$ARGUMENTS 23:59" --format=%H --no-merges | head -1); [ -n "$FIRST" ] && git diff --stat "$FIRST"^.."$LAST" 2>/dev/null; else FIRST=$(git log --all --since=midnight --format=%H --no-merges | tail -1); [ -n "$FIRST" ] && git diff --stat "$FIRST"^..HEAD 2>/dev/null; fi`
+!`if [ -n "$ARGUMENTS" ]; then FIRST=$(git log --all --author="Damian Tziamtzis" --after="$ARGUMENTS 00:00" --before="$ARGUMENTS 23:59" --format=%H --no-merges | tail -1); LAST=$(git log --all --author="Damian Tziamtzis" --after="$ARGUMENTS 00:00" --before="$ARGUMENTS 23:59" --format=%H --no-merges | head -1); [ -n "$FIRST" ] && git diff --stat "$FIRST"^.."$LAST" 2>/dev/null; else FIRST=$(git log --all --author="Damian Tziamtzis" --since=midnight --format=%H --no-merges | tail -1); [ -n "$FIRST" ] && git diff --stat "$FIRST"^..HEAD 2>/dev/null; fi`
 
 ## Current daily note content:
 
