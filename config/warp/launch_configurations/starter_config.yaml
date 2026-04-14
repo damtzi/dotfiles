@@ -25,25 +25,25 @@
 name: Starter Config
 active_window_index: 0
 windows:
-  - active_tab_index: 0
-    tabs:
-      - title: senses
-        layout:
-          cwd: /Users/damitzi/Developer/oke/premium-platform
-          is_focused: true
-        color: yellow
-      - title: campy
-        layout:
-          cwd: /Users/damitzi/Developer/campy/campy-app
-          is_focused: true
-        color: blue
-      - title: pazur
-        layout:
-          cwd: /Users/damitzi/Developer/projects/petid-suite/pazur
-          is_focused: true
-        color: green
-      - title: wolontariat
-        layout:
-          cwd: /Users/damitzi/Developer/fkc/wolontariatonline.org
-          is_focused: true
-        color: red
+    - active_tab_index: 0
+      tabs:
+          - title: oke
+            layout:
+                cwd: /Users/damitzi/Developer/oke
+                is_focused: true
+            color: yellow
+          - title: campy
+            layout:
+                cwd: /Users/damitzi/Developer/campy
+                is_focused: true
+            color: blue
+          - title: pazur
+            layout:
+                cwd: /Users/damitzi/Developer/projects/petid-suite/pazur
+                is_focused: true
+            color: green
+          - title: wolontariat
+            layout:
+                cwd: /Users/damitzi/Developer/fkc/wolontariatonline.org
+                is_focused: true
+            color: red
