@@ -5,7 +5,7 @@
         "edit": "allow",
         "webfetch": "allow"
     },
-    "plugin": ["@sveltejs/opencode"],
+    "plugin": ["@sveltejs/opencode", "@warp-dot-dev/opencode-warp"],
     "mcp": {
         "context7": {
             "type": "remote",

@@ -1,4 +1,13 @@
 {
+    "outline_panel": {
+        "dock": "right"
+    },
+    "collaboration_panel": {
+        "dock": "right"
+    },
+    "git_panel": {
+        "dock": "right"
+    },
     "edit_predictions": {
         "provider": "zed",
     },
@@ -10,15 +19,26 @@
         "dock": "left",
         "default_profile": "write",
         "default_model": {
+            "effort": "high",
             "provider": "copilot_chat",
-            "model": "claude-sonnet-4.5",
+            "model": "gpt-5.4-mini",
         },
     },
     "agent_servers": {
-        "OpenCode": {
-            "type": "custom",
-            "command": "opencode",
-            "args": ["acp"],
+        "cursor": {
+            "type": "registry"
+        },
+        "codex-acp": {
+            "type": "registry"
+        },
+        "claude-acp": {
+            "type": "registry"
+        },
+        "opencode": {
+            "type": "registry"
+        },
+        "pi-acp": {
+            "type": "registry"
         },
     },
     "theme": {
@@ -84,57 +104,45 @@
             "prettier": { "allowed": false },
             "language_servers": ["vtsls", "eslint"],
         },
-        "JavaScript": {
-            "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-            },
-            "prettier": { "allowed": true },
-            "language_servers": ["vtsls", "eslint"],
-        },
-        "TypeScript": {
-            "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-            },
-            "prettier": { "allowed": true },
-            "language_servers": ["vtsls", "eslint"],
-        },
-        "TSX": {
-            "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-            },
-            "prettier": { "allowed": true },
-            "language_servers": [
-                "vtsls",
-                "eslint",
-                "tailwindcss-language-server",
-            ],
-        },
-        "Svelte": {
-            "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-            },
-            "prettier": { "allowed": true },
-            "language_servers": [
-                "eslint",
-                "tailwindcss-language-server",
-                "svelte-language-server",
-            ],
-        },
+        // "JavaScript": {
+        //     "code_actions_on_format": {
+        //         "source.fixAll.eslint": true,
+        //     },
+        //     "prettier": { "allowed": true },
+        //     "language_servers": ["vtsls", "eslint"],
+        // },
+        // "TypeScript": {
+        //     "code_actions_on_format": {
+        //         "source.fixAll.eslint": true,
+        //     },
+        //     "prettier": { "allowed": true },
+        //     "language_servers": ["vtsls", "eslint"],
+        // },
+        // "TSX": {
+        //     "code_actions_on_format": {
+        //         "source.fixAll.eslint": true,
+        //     },
+        //     "prettier": { "allowed": true },
+        //     "language_servers": [
+        //         "vtsls",
+        //         "eslint",
+        //         "tailwindcss-language-server",
+        //     ],
+        // },
+        // "Svelte": {
+        //     "code_actions_on_format": {
+        //         "source.fixAll.eslint": true,
+        //     },
+        //     "prettier": { "allowed": true },
+        //     "language_servers": [
+        //         "eslint",
+        //         "tailwindcss-language-server",
+        //         "svelte-language-server",
+        //     ],
+        // },
         "Rust": {
             "language_servers": ["rustc", "rust-analyzer"],
             "formatter": "language_server",
         },
     },
-    // "languages": {
-    //     "TSX": {
-    //         "code_actions_on_format": {
-    //             "source.fixAll.eslint": true
-    //         },
-    //         "formatter": {
-    //             "external": {
-    //                 "command": "node_modules/.bin/prettier",
-    //                 "arguments": ["--stdin-filepath", "{buffer_path}"]
-    //             }
-    //         }
-    //     }
 }
