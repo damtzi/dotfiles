@@ -1,3 +1,4 @@
 ---
-"terminal:scroll_to_top_of_selected_block": none
 "editor_view:move_to_and_select_buffer_start": none
+"welcome_view:open_project": none
+"terminal:scroll_to_top_of_selected_block": none

@@ -12,25 +12,4 @@
             // "shift shift": "file_finder::Toggle"
         },
     },
-    {
-        "context": "Editor && vim_mode == insert",
-        "bindings": {
-            "cmd-!": [
-                "agent::NewExternalAgentThread",
-                {
-                    "agent": {
-                        "custom": {
-                            "name": "OpenCode",
-                            "command": {
-                                "command": "opencode",
-                                "args": [
-                                    "acp"
-                                ]
-                            }
-                        }
-                    }
-                }
-            ],
-        },
-    },
 ]

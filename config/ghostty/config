@@ -17,5 +17,5 @@ cursor-style-blink = true
 macos-titlebar-style = tabs
 
 # shell
-shell-integration = none
+shell-integration = zsh
 shell-integration-features = title
