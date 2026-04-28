@@ -1,0 +1,8 @@
+# Machine-specific zsh config
+# Copy this file to local.zsh and keep personal / one-off tweaks here.
+# This file is intentionally not committed.
+
+# Examples:
+# export MY_PRIVATE_BIN="$HOME/bin"
+# export PATH="$MY_PRIVATE_BIN:$PATH"
+# alias workvpn='some-command'

@@ -1,8 +1,10 @@
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "/Users/damitzi/.deno/env"
-. "$HOME/.cargo/env"
+[ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
+[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
+if [[ "$TERM_PROGRAM" == "kiro" ]] && command -v kiro >/dev/null 2>&1; then
+  . "$(kiro --locate-shell-integration-path bash)"
+fi
