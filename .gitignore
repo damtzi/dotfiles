@@ -38,6 +38,7 @@ config/zed/.tmp*
 # Sensitive data (never commit)
 git/.gitconfig.local
 config/.npmrc
+shell/zsh/local.zsh
 
 # Node modules (if any)
 node_modules/
