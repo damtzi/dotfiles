@@ -14,7 +14,7 @@ Personal dotfiles for macOS, managed with automated setup scripts.
 
 ### Shell Configuration
 - **Zsh** - Main shell with oh-my-zsh, syntax highlighting, autosuggestions
-- **Starship** - Modern prompt for Warp Terminal
+- **Starship** - Modern prompt for interactive shells, including Ghostty and Warp
 - **Bash** - Compatibility configs
 
 ### Development Tools
@@ -27,7 +27,7 @@ Personal dotfiles for macOS, managed with automated setup scripts.
 - **Zed** - Editor settings with LSP, formatter, agent config
 - **OpenCode** - AI agent config with custom instructions and skills
 - **Warp** - Terminal emulator with keybindings, launch configs, and custom themes
-- **Ghostty** - Terminal emulator config (backup)
+- **Ghostty** - Terminal emulator config
 - **Brewfile** - 67+ packages, casks, and VSCode extensions
 
 ## Prerequisites
@@ -138,6 +138,7 @@ source ~/.zshrc
 ```
 .dotfiles/
 ├── shell/              # Shell configs (.zshrc, .zshenv, .bashrc, etc.)
+│   └── zsh/            # Modular zsh config (exports, prompt, completions, aliases, local overrides)
 ├── git/                # Git config (public + template for private)
 ├── config/             # XDG configs
 │   ├── zed/           # Zed editor settings
@@ -188,7 +189,17 @@ Changes to symlinked files take effect immediately.
 
 ### Shell Aliases
 
-Edit `shell/.zshrc` and add aliases in the `# ===== Aliases =====` section.
+Edit `shell/zsh/aliases.zsh`.
+
+### Machine-Specific Zsh Overrides
+
+Keep one-off or private shell tweaks in `shell/zsh/local.zsh`.
+
+```bash
+cp shell/zsh/local.zsh.example shell/zsh/local.zsh
+```
+
+That file is ignored by git and loaded automatically if present.
 
 ### Git Config
 
@@ -197,7 +208,10 @@ Global settings go in `git/.gitconfig` (tracked).
 
 ### Environment Variables
 
-Add to `shell/.zshenv` for environment-wide variables.
+- Add zsh session PATH / tooling config to `shell/zsh/exports.zsh`
+- Add zsh-wide minimal environment variables to `shell/.zshenv`
+- Add POSIX login-shell environment variables to `shell/.profile`
+- Add zsh login-shell setup to `shell/.zprofile`
 
 ## Sensitive Data
 
@@ -215,8 +229,8 @@ Templates are provided in the repo (`.example` files).
 ## Key Technologies
 
 - **Shell**: zsh with oh-my-zsh (git, zsh-syntax-highlighting, zsh-autosuggestions, gpg-agent)
-- **Prompt**: Starship (for Warp)
-- **Terminal**: Warp (primary), Ghostty (backup)
+- **Prompt**: Starship
+- **Terminal**: Ghostty and Warp
 - **Editor**: Zed
 - **AI Agent**: OpenCode
 - **Package Manager**: Homebrew, pnpm
