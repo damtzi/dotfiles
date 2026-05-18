@@ -3,7 +3,7 @@ theme = Cobalt2
 background-opacity = 1
 
 # font
-font-family = "FiraCode Nerd Font Mono"
+font-family = "JetBrains Mono"
 font-size = 13
 
 # cursor
