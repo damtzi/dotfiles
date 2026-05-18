@@ -28,6 +28,7 @@ Personal dotfiles for macOS, managed with automated setup scripts.
 - **OpenCode** - AI agent config with custom instructions and skills
 - **Warp** - Terminal emulator with keybindings, launch configs, and custom themes
 - **Ghostty** - Terminal emulator config
+- **Pi** - Custom light/dark themes for the Pi coding agent
 - **Brewfile** - 67+ packages, casks, and VSCode extensions
 
 ## Prerequisites
@@ -149,6 +150,8 @@ source ~/.zshrc
 │   ├── starship.toml  # Starship prompt config
 │   ├── ssh_config     # SSH config (no private keys)
 │   └── .yarnrc        # Yarn config
+├── .pi/                # Pi coding agent config
+│   └── agent/themes/    # Custom Pi themes
 ├── scripts/
 │   ├── bootstrap.sh        # Fresh machine setup
 │   ├── install.sh          # Create symlinks
@@ -181,8 +184,8 @@ Changes to symlinked files take effect immediately.
 
 ### Add New Config
 
-1. Add file to appropriate directory in repo
-2. Update `scripts/install.sh` to create symlink
+1. Add file to the appropriate directory in the repo (`.pi/` for Pi themes/config, `config/` for XDG apps, etc.)
+2. Update `scripts/install.sh` to create the symlink
 3. Commit and push changes
 
 ## Customization
@@ -205,6 +208,10 @@ That file is ignored by git and loaded automatically if present.
 
 Personal settings go in `~/.gitconfig.local` (not tracked).
 Global settings go in `git/.gitconfig` (tracked).
+
+### Pi Themes
+
+Custom Pi themes live in `.pi/agent/themes/` and are linked to `~/.pi/agent/themes/`.
 
 ### Environment Variables
 

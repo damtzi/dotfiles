@@ -78,6 +78,10 @@ if [[ ! -f "$HOME/.npmrc" ]]; then
     log_info "Copy config/.npmrc.example to ~/.npmrc and add your auth tokens if needed"
 fi
 
+# Pi configuration
+log_header "Pi Configuration"
+link_file "$DOTFILES_DIR/.pi/agent/themes" "$HOME/.pi/agent/themes"
+
 # Summary
 echo ""
 log_header "Installation Complete!"
