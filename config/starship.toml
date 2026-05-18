@@ -1,7 +1,35 @@
+# format = """
+# $directory$git_branch$git_status$fill$time
+# $character
+# """
+
 format = """
-$directory$git_branch$git_status$fill$time
-$character
-"""
+$custom\
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$package\
+$deno\
+$nodejs\
+$python\
+$rust\
+$memory_usage\
+$env_var\
+$jobs\
+$battery\
+$time\
+$line_break\
+$status\
+$shell\
+$character"""
 
 add_newline = false
 command_timeout = 1000
