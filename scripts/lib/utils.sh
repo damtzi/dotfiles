@@ -57,7 +57,7 @@ create_backup_dir() {
     local backup_dir="$HOME/.dotfiles.backup"
     if [[ ! -d "$backup_dir" ]]; then
         mkdir -p "$backup_dir"
-        log_info "Created backup directory: $backup_dir"
+        log_info "Created backup directory: $backup_dir" >&2
     fi
     echo "$backup_dir"
 }
@@ -72,7 +72,7 @@ backup_file() {
         local timestamp="$(date +%Y%m%d_%H%M%S)"
         local backup_path="$backup_dir/${filename}.${timestamp}.bak"
         
-        cp -r "$file" "$backup_path"
+        cp -RP "$file" "$backup_path"
         log_info "Backed up: $file → $backup_path"
         return 0
     fi

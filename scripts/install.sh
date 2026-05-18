@@ -80,7 +80,9 @@ fi
 
 # Pi configuration
 log_header "Pi Configuration"
-link_file "$DOTFILES_DIR/.pi/agent/themes" "$HOME/.pi/agent/themes"
+link_file "$DOTFILES_DIR/config/pi/agent/themes" "$HOME/.pi/agent/themes"
+link_file "$DOTFILES_DIR/config/pi/agent/extensions" "$HOME/.pi/agent/extensions"
+link_file "$DOTFILES_DIR/config/agents/skills" "$HOME/.pi/agent/skills"
 
 # Summary
 echo ""
