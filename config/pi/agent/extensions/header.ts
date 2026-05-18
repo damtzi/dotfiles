@@ -24,7 +24,7 @@ const ICE: Rgb = [151, 205, 255];
 const LOGO_PALETTE: Rgb[] = [DEEP_BLUE, ROYAL_BLUE, SKY, ICE, SKY, ROYAL_BLUE];
 
 const MIN_WIDTH = 76;
-const LEFT_WIDTH = 32;
+const LEFT_WIDTH = 24;
 
 const LOGO_LINES = [
   "██████   ",
@@ -210,14 +210,10 @@ function leftContent(row: number, width: number, modelId: string) {
     case 4:
     case 5:
     case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
       return center(gradientLogoLine(LOGO_LINES[row - 3], row), width);
-    case 12:
+    case 8:
       return center(fg(PINK, modelId), width);
-    case 13:
+    case 9:
       return center(fg(MUTED, "openai-codex"), width);
     default:
       return " ".repeat(width);
@@ -234,6 +230,9 @@ function rightContent(row: number, width: number, info: StartupInfo) {
     const session = info.recentSessions[index];
     return session ? `${fg(MUTED, "•")} ${session}` : "";
   };
+  const mcpSummary = info.mcp.length === 1
+    ? mcpLine(0)
+    : `${info.mcp.slice(0, 3).map((server) => fg(TEAL, server)).join(fg(MUTED, ", "))}${info.mcp.length > 3 ? fg(MUTED, ` +${info.mcp.length - 3}`) : ""}`;
   const lines: Record<number, string> = {
     0: `${BOLD}${fg(BLUE, "Tips")}${RESET}`,
     1: `${fg(MUTED, "/")} for commands`,
@@ -249,12 +248,9 @@ function rightContent(row: number, width: number, info: StartupInfo) {
     11: recentLine(0),
     12: recentLine(1),
     13: recentLine(2),
-    14: "",
-    15: rule(width),
-    16: `${BOLD}${fg(BLUE, "MCP")}${RESET}`,
-    17: mcpLine(0),
-    18: mcpLine(1),
-    19: mcpLine(2) || (info.mcp.length > 3 ? fg(MUTED, `${info.mcp.length - 2} more`) : ""),
+    14: rule(width),
+    15: `${BOLD}${fg(BLUE, "MCP")}${RESET}`,
+    16: mcpSummary,
   };
   return padRight(lines[row] ?? "", width);
 }
@@ -271,7 +267,7 @@ function renderHeader(width: number, modelId: string, info: StartupInfo) {
     `${fg(BORDER, "┌")}${title}${fg(BORDER, "─".repeat(titlePad) + "┐")}`,
   ];
 
-  for (let row = 0; row < 20; row++) {
+  for (let row = 0; row < 17; row++) {
     lines.push(
       `${fg(BORDER, "│")}${leftContent(row, leftWidth, modelId)}${fg(BORDER, "│")} ${rightContent(row, rightWidth - 1, info)}${fg(BORDER, "│")}`,
     );
