@@ -9,7 +9,7 @@ font_name = "JetBrains Mono"
 notebook_font_size = 14.0
 
 [appearance.vertical_tabs]
-primary_info = "working_directory"
+primary_info = "command"
 compact_subtitle = "working_directory"
 display_granularity = "tabs"
 view_mode = "compact"
