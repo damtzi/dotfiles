@@ -59,6 +59,11 @@ link_file "$DOTFILES_DIR/config/zed" "$HOME/.config/zed"
 # OpenCode
 link_file "$DOTFILES_DIR/config/opencode" "$HOME/.config/opencode"
 
+# Claude Code
+mkdir -p "$HOME/.claude"
+link_file "$DOTFILES_DIR/config/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+link_file "$DOTFILES_DIR/config/claude/settings.json" "$HOME/.claude/settings.json"
+
 # GitHub CLI
 link_file "$DOTFILES_DIR/config/gh" "$HOME/.config/gh"
 

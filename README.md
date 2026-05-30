@@ -26,6 +26,7 @@ Personal dotfiles for macOS, managed with automated setup scripts.
 ### Applications
 - **Zed** - Editor settings with LSP, formatter, agent config
 - **OpenCode** - AI agent config with custom instructions and skills
+- **Claude Code** - AI agent config with shared instructions
 - **Warp** - Terminal emulator with keybindings, launch configs, and custom themes
 - **Ghostty** - Terminal emulator config
 - **Pi** - Custom light/dark themes, extensions, and skills for the Pi coding agent
@@ -144,6 +145,7 @@ source ~/.zshrc
 ├── config/             # XDG configs
 │   ├── zed/           # Zed editor settings
 │   ├── opencode/      # OpenCode AI agent config
+│   ├── claude/        # Claude Code config
 │   ├── warp/          # Warp terminal config (keybindings, launch configs, themes)
 │   ├── ghostty/       # Ghostty terminal config
 │   ├── gh/            # GitHub CLI config
@@ -209,6 +211,10 @@ That file is ignored by git and loaded automatically if present.
 Personal settings go in `~/.gitconfig.local` (not tracked).
 Global settings go in `git/.gitconfig` (tracked).
 
+### AI Agent Instructions
+
+Shared instructions live in `AGENTS.md`. Claude Code loads them via `config/claude/CLAUDE.md`, which is linked to `~/.claude/CLAUDE.md`.
+
 ### Pi Themes
 
 Custom Pi themes live in `config/pi/agent/themes/` and are linked to `~/.pi/agent/themes/`.
@@ -244,7 +250,7 @@ Templates are provided in the repo (`.example` files).
 - **Prompt**: Starship
 - **Terminal**: Ghostty and Warp
 - **Editor**: Zed
-- **AI Agent**: OpenCode
+- **AI Agent**: OpenCode, Claude Code
 - **Package Manager**: Homebrew, pnpm
 - **Version Control**: Git with GPG signing via pinentry-mac
 
