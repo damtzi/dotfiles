@@ -17,3 +17,4 @@ for file in \
 do
   [ -f "$file" ] && source "$file"
 done
+export PATH="$HOME/.local/bin:$PATH"
