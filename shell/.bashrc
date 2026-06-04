@@ -8,3 +8,8 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 if [[ "$TERM_PROGRAM" == "kiro" ]] && command -v kiro >/dev/null 2>&1; then
   . "$(kiro --locate-shell-integration-path bash)"
 fi
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

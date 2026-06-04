@@ -18,3 +18,7 @@ do
   [ -f "$file" ] && source "$file"
 done
 export PATH="$HOME/.local/bin:$PATH"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
