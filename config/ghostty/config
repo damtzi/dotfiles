@@ -1,5 +1,5 @@
 # color scheme
-theme = Cobalt2
+theme = dark:cobalt2-default,light:Catppuccin Latte
 background-opacity = 1
 
 # font
