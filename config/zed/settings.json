@@ -39,7 +39,7 @@
     "theme": {
         "mode": "system",
         "dark": "Cobalt",
-        "light": "One Light",
+        "light": "Catppuccin Latte",
     },
     "autosave": {
         "after_delay": {
