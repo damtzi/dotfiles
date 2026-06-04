@@ -17,8 +17,10 @@ enabled = true
 
 [appearance.themes]
 selected_system_themes = {
-  dark = { custom = { name = "Cobalt 2", path = "/Users/damitzi/.warp/themes/cobalt_2.yaml" } },
-  light = "light",
+  dark = { custom = { name = "Cobalt2", path = "/Users/damitzi/.warp/themes/cobalt2.yaml" } },
+  light = {
+    custom = { name = "Catppuccin Latte", path = "/Users/damitzi/.warp/themes/catppuccin-latte.yaml" },
+  },
 }
 system_theme = true
 
