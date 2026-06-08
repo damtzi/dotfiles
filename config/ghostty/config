@@ -7,10 +7,7 @@ font-family = "JetBrains Mono"
 font-size = 13
 
 # cursor
-cursor-style = underline
-cursor-color = #ffffff
-cursor-text = #ffffff
-cursor-opacity = 1
+cursor-style = bar
 cursor-style-blink = true
 
 # title bar
@@ -19,3 +16,4 @@ macos-titlebar-style = tabs
 # shell
 shell-integration = zsh
 shell-integration-features = title
+shell-integration-features = no-cursor
