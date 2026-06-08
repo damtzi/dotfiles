@@ -9,10 +9,10 @@ font_name = "JetBrains Mono"
 notebook_font_size = 14.0
 
 [appearance.vertical_tabs]
-primary_info = "command"
+primary_info = "working_directory"
 compact_subtitle = "working_directory"
 display_granularity = "tabs"
-view_mode = "compact"
+view_mode = "expanded"
 enabled = true
 
 [appearance.themes]
@@ -46,6 +46,7 @@ input_mode = "pinned_to_bottom"
 
 [terminal]
 mouse_reporting_enabled = true
+osc52_clipboard_access = "write_only"
 
 [terminal.input]
 honor_ps1 = false
