@@ -1,5 +1,5 @@
 # color scheme
-theme = dark:cobalt2-default,light:Catppuccin Latte
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 background-opacity = 1
 
 # font
