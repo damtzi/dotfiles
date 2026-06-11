@@ -8,13 +8,13 @@ $custom\
 $username\
 $hostname\
 $shlvl\
-$kubernetes\
 $directory\
 $vcsh\
 $git_branch\
 $git_commit\
 $git_state\
 $git_status\
+$fill\
 $docker_context\
 $package\
 $deno\
@@ -24,7 +24,7 @@ $rust\
 $memory_usage\
 $env_var\
 $jobs\
-$battery\
+$cmd_duration\
 $time\
 $line_break\
 $status\
