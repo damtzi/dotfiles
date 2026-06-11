@@ -85,6 +85,8 @@ fi
 
 # Pi configuration
 log_header "Pi Configuration"
+mkdir -p "$HOME/.pi/agent"
+link_file "$DOTFILES_DIR/config/pi/agent/settings.json" "$HOME/.pi/agent/settings.json"
 link_file "$DOTFILES_DIR/config/pi/agent/themes" "$HOME/.pi/agent/themes"
 link_file "$DOTFILES_DIR/config/pi/agent/extensions" "$HOME/.pi/agent/extensions"
 link_file "$DOTFILES_DIR/config/agents/skills" "$HOME/.pi/agent/skills"
