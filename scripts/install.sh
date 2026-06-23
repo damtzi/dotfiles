@@ -70,6 +70,9 @@ link_file "$DOTFILES_DIR/config/gh" "$HOME/.config/gh"
 # Warp
 link_file "$DOTFILES_DIR/config/warp" "$HOME/.warp"
 
+# Cursor
+link_file "$DOTFILES_DIR/config/cursor" "$HOME/.cursor"
+
 # SSH config
 log_header "SSH Configuration"
 link_file "$DOTFILES_DIR/config/ssh_config" "$HOME/.ssh/config"
