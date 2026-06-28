@@ -1,14 +1,15 @@
 {
-  "lastChangelogVersion": "0.78.1",
+  "lastChangelogVersion": "0.80.2",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "low",
+  "defaultThinkingLevel": "high",
   "theme": "catppuccin-tui-mocha",
   "hideThinkingBlock": false,
   "packages": [
     "npm:pi-web-access",
     "npm:pi-terminal-theme",
     "npm:pi-cursor-theme",
-    "npm:pi-catppuccin-tui"
+    "npm:pi-catppuccin-tui",
+    "npm:pi-theme-flexoki"
   ]
 }

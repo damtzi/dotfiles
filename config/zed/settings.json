@@ -1,4 +1,5 @@
 {
+    "icon_theme": "Material Icon Theme",
     "cli_default_open_behavior": "existing_window",
     "outline_panel": {
         "dock": "right"
