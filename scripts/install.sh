@@ -71,7 +71,28 @@ link_file "$DOTFILES_DIR/config/gh" "$HOME/.config/gh"
 link_file "$DOTFILES_DIR/config/warp" "$HOME/.warp"
 
 # Cursor
-link_file "$DOTFILES_DIR/config/cursor" "$HOME/.cursor"
+if [[ -L "$HOME/.cursor" ]] && [[ "$(readlink "$HOME/.cursor")" == "$DOTFILES_DIR/config/cursor" ]]; then
+    log_warning "Migrating old Cursor directory symlink to real ~/.cursor"
+    rm "$HOME/.cursor"
+    mkdir -p "$HOME/.cursor"
+    shopt -s dotglob nullglob
+    for item in "$DOTFILES_DIR/config/cursor"/*; do
+        name="$(basename "$item")"
+        case "$name" in
+            .gitignore|rules|commands|skills) continue ;;
+        esac
+        if [[ ! -e "$HOME/.cursor/$name" ]]; then
+            mv "$item" "$HOME/.cursor/$name"
+        fi
+    done
+    shopt -u dotglob nullglob
+else
+    mkdir -p "$HOME/.cursor"
+fi
+
+link_file "$DOTFILES_DIR/config/cursor/rules" "$HOME/.cursor/rules"
+link_file "$DOTFILES_DIR/config/cursor/commands" "$HOME/.cursor/commands"
+link_file "$DOTFILES_DIR/config/cursor/skills" "$HOME/.cursor/skills"
 
 # SSH config
 log_header "SSH Configuration"

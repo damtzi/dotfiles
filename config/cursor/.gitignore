@@ -1,0 +1,11 @@
+# Ignore Cursor runtime by default.
+*
+
+# Portable Cursor dotfiles.
+!.gitignore
+!rules/
+!rules/**
+!commands/
+!commands/**
+!skills/
+!skills/**
