@@ -1,68 +1,71 @@
 {
-  "effortLevel": "high",
-  "enabledPlugins": {
-    "warp@claude-code-warp": true
-  },
-  "extraKnownMarketplaces": {
-    "claude-code-warp": {
-      "source": {
-        "repo": "warpdotdev/claude-code-warp",
-        "source": "github"
-      }
-    }
-  },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "atuin hook claude-code",
-            "type": "command"
-          }
+    "model": "opus",
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "atuin hook claude-code"
+                    }
+                ]
+            }
         ],
-        "matcher": "Bash"
-      }
-    ],
-    "PostToolUseFailure": [
-      {
-        "hooks": [
-          {
-            "command": "atuin hook claude-code",
-            "type": "command"
-          }
+        "PostToolUseFailure": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "atuin hook claude-code"
+                    }
+                ]
+            }
         ],
-        "matcher": "Bash"
-      }
-    ],
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "atuin hook claude-code",
-            "type": "command"
-          }
+        "PreToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "atuin hook claude-code"
+                    }
+                ]
+            }
         ],
-        "matcher": "Bash"
-      }
-    ],
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "command": "bash '/Users/damitzi/.claude/hooks/herdr-agent-state.sh' session",
-            "timeout": 10,
-            "type": "command"
-          }
-        ],
-        "matcher": "*"
-      }
-    ]
-  },
-  "model": "opus",
-  "skipDangerousModePermissionPrompt": true,
-  "statusLine": {
-    "command": "bash '/Users/damitzi/.dotfiles/config/claude/statusline.sh'",
-    "type": "command"
-  },
-  "theme": "auto"
+        "SessionStart": [
+            {
+                "matcher": "*",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash '/Users/damitzi/.claude/hooks/herdr-agent-state.sh' session",
+                        "timeout": 10
+                    }
+                ]
+            }
+        ]
+    },
+    "statusLine": {
+        "type": "command",
+        "command": "bash '/Users/damitzi/.dotfiles/config/claude/statusline.sh'"
+    },
+    "enabledPlugins": {
+        "warp@claude-code-warp": true
+    },
+    "extraKnownMarketplaces": {
+        "claude-code-warp": {
+            "source": {
+                "source": "github",
+                "repo": "warpdotdev/claude-code-warp"
+            }
+        }
+    },
+    "effortLevel": "high",
+    "skipDangerousModePermissionPrompt": true,
+    "theme": "auto",
+    "inputNeededNotifEnabled": true,
+    "agentPushNotifEnabled": true,
+    "disableArtifact": true
 }
