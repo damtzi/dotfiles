@@ -23,5 +23,17 @@
         "unbind": {
             "ctrl-shift-g": "git_panel::ToggleFocus"
         }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "cmd-shift-j": "multi_workspace::ToggleWorkspaceSidebar"
+        }
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "alt-cmd-j": "multi_workspace::ToggleWorkspaceSidebar"
+        }
     }
 ]
