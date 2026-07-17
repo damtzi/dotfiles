@@ -27,6 +27,12 @@
         },
     },
     "agent_servers": {
+        "cursor": {
+            "type": "registry"
+        },
+        "amp-acp": {
+            "type": "registry"
+        },
         "codex-acp": {
             "type": "registry"
         },
@@ -39,7 +45,7 @@
     },
     "theme": {
         "mode": "system",
-        "dark": "Cobalt",
+        "dark": "Catppuccin Macchiato",
         "light": "Catppuccin Latte",
     },
     "autosave": {
