@@ -50,6 +50,10 @@ mkdir -p "$HOME/.config"
 # Starship
 link_file "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 
+# Amp
+mkdir -p "$HOME/.config/amp"
+link_file "$DOTFILES_DIR/config/amp/settings.json" "$HOME/.config/amp/settings.json"
+
 # Ghostty
 link_file "$DOTFILES_DIR/config/ghostty" "$HOME/.config/ghostty"
 

@@ -30,6 +30,7 @@ Personal dotfiles for macOS, managed with automated setup scripts.
 - **Warp** - Terminal emulator with keybindings, launch configs, and custom themes
 - **Ghostty** - Terminal emulator config
 - **Pi** - Custom light/dark themes, extensions, and skills for the Pi coding agent
+- **Amp** - Remote thread creation settings
 - **Brewfile** - 67+ packages, casks, and VSCode extensions
 
 ## Prerequisites
@@ -150,6 +151,7 @@ source ~/.zshrc
 │   ├── ghostty/       # Ghostty terminal config
 │   ├── gh/            # GitHub CLI config
 │   ├── pi/            # Pi coding agent config (themes/extensions)
+│   ├── amp/           # Amp configuration
 │   ├── agents/        # Shared agent skills
 │   ├── starship.toml  # Starship prompt config
 │   ├── ssh_config     # SSH config (no private keys)
