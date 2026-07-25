@@ -17,7 +17,7 @@ enabled = true
 
 [appearance.themes]
 selected_system_themes = {
-  dark = { custom = { name = "Cobalt2", path = "cobalt2.yaml" } },
+  dark = { custom = { name = "Catppuccin Macchiato", path = "catppuccin-macchiato.yaml" } },
   light = { custom = { name = "Catppuccin Latte", path = "catppuccin-latte.yaml" } },
 }
 system_theme = true
