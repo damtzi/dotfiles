@@ -11,9 +11,9 @@ const BOLD = "\x1b[1m";
 
 const TEXT: Rgb = [202, 211, 245];
 const MUTED: Rgb = [147, 154, 183];
-const BORDER: Rgb = [91, 96, 120];
 const PINK: Rgb = [245, 189, 230];
 const BLUE: Rgb = [138, 173, 244];
+const BORDER = BLUE;
 const GREEN: Rgb = [166, 218, 149];
 const TEAL: Rgb = [139, 213, 202];
 
@@ -38,7 +38,6 @@ type StartupInfo = {
   contextFiles: number;
   extensions: number;
   skills: number;
-  mcp: string[];
   recentSessions: string[];
 };
 
@@ -134,28 +133,6 @@ function countContextFiles() {
   return count;
 }
 
-function readMcpServers() {
-  const candidates = [
-    path.join(os.homedir(), ".pi", "mcp.json"),
-    path.join(os.homedir(), ".pi", "agent", "mcp.json"),
-    path.join(os.homedir(), ".config", "pi", "mcp.json"),
-    path.join(process.cwd(), ".mcp.json"),
-  ];
-
-  for (const file of candidates) {
-    try {
-      const config = JSON.parse(fs.readFileSync(file, "utf8")) as Record<string, unknown>;
-      const servers = config.mcpServers ?? config.servers;
-      if (servers && typeof servers === "object" && !Array.isArray(servers)) {
-        return Object.keys(servers as Record<string, unknown>);
-      }
-    } catch {
-      // ignore missing or invalid MCP configs
-    }
-  }
-  return [];
-}
-
 function decodeSessionDir(name: string) {
   return name.replace(/^-+|-+$/g, "").split("-").filter(Boolean).at(-1) ?? name;
 }
@@ -192,12 +169,10 @@ function getStartupInfo(): StartupInfo {
   const agentDir = path.join(os.homedir(), ".pi", "agent");
   const extensionsDir = path.join(agentDir, "extensions");
   const skillsDir = path.join(agentDir, "skills");
-  const mcp = readMcpServers();
   return {
     contextFiles: countContextFiles(),
     extensions: countFiles(extensionsDir, (name) => name.endsWith(".ts") || name.endsWith(".js")),
     skills: countSkillFiles(skillsDir),
-    mcp: mcp.length > 0 ? mcp : [fg(MUTED, "no MCP servers configured")],
     recentSessions: recentSessions(),
   };
 }
@@ -221,18 +196,10 @@ function leftContent(row: number, width: number, modelId: string) {
 }
 
 function rightContent(row: number, width: number, info: StartupInfo) {
-  const mcpLine = (index: number) => {
-    const server = info.mcp[index];
-    if (!server) return "";
-    return server.includes("\x1b[") ? server : `${fg(GREEN, "●")} ${fg(TEAL, server)}`;
-  };
   const recentLine = (index: number) => {
     const session = info.recentSessions[index];
     return session ? `${fg(MUTED, "•")} ${session}` : "";
   };
-  const mcpSummary = info.mcp.length === 1
-    ? mcpLine(0)
-    : `${info.mcp.slice(0, 3).map((server) => fg(TEAL, server)).join(fg(MUTED, ", "))}${info.mcp.length > 3 ? fg(MUTED, ` +${info.mcp.length - 3}`) : ""}`;
   const lines: Record<number, string> = {
     0: `${BOLD}${fg(BLUE, "Tips")}${RESET}`,
     1: `${fg(MUTED, "/")} for commands`,
@@ -248,9 +215,6 @@ function rightContent(row: number, width: number, info: StartupInfo) {
     11: recentLine(0),
     12: recentLine(1),
     13: recentLine(2),
-    14: rule(width),
-    15: `${BOLD}${fg(BLUE, "MCP")}${RESET}`,
-    16: mcpSummary,
   };
   return padRight(lines[row] ?? "", width);
 }
@@ -267,7 +231,7 @@ function renderHeader(width: number, modelId: string, info: StartupInfo) {
     `${fg(BORDER, "┌")}${title}${fg(BORDER, "─".repeat(titlePad) + "┐")}`,
   ];
 
-  for (let row = 0; row < 17; row++) {
+  for (let row = 0; row < 14; row++) {
     lines.push(
       `${fg(BORDER, "│")}${leftContent(row, leftWidth, modelId)}${fg(BORDER, "│")} ${rightContent(row, rightWidth - 1, info)}${fg(BORDER, "│")}`,
     );
