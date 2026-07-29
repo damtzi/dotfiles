@@ -3,15 +3,9 @@
     "defaultProvider": "openai-codex",
     "defaultModel": "gpt-5.6-sol",
     "defaultThinkingLevel": "medium",
-    "theme": "catppuccin-tui-mocha",
+    "theme": "nightowl",
     "collapseChangelog": true,
     "hideThinkingBlock": false,
     "showHardwareCursor": true,
-    "packages": [
-        "npm:pi-web-access",
-        "npm:pi-terminal-theme",
-        "npm:pi-cursor-theme",
-        "npm:pi-catppuccin-tui",
-        "npm:pi-theme-flexoki"
-    ]
+    "packages": ["npm:pi-web-access", "npm:@plannotator/pi-extension"]
 }
