@@ -228,7 +228,7 @@ function renderHeader(width: number, modelId: string, info: StartupInfo) {
   const title = ` ${fg(PINK, "π")} `;
   const titlePad = Math.max(0, boxWidth - visibleLength(title) - 2);
   const lines = [
-    `${fg(BORDER, "┌")}${title}${fg(BORDER, "─".repeat(titlePad) + "┐")}`,
+    `${fg(BORDER, "╭")}${title}${fg(BORDER, "─".repeat(titlePad) + "╮")}`,
   ];
 
   for (let row = 0; row < 14; row++) {
@@ -241,7 +241,7 @@ function renderHeader(width: number, modelId: string, info: StartupInfo) {
   const bottomLeft = Math.max(0, Math.floor((boxWidth - visibleLength(prompt) - 2) / 2));
   const bottomRight = Math.max(0, boxWidth - visibleLength(prompt) - 2 - bottomLeft);
   lines.push(
-    `${fg(BORDER, "└" + "─".repeat(bottomLeft))}${fg(MUTED, prompt)}${fg(BORDER, "─".repeat(bottomRight) + "┘")}`,
+    `${fg(BORDER, "╰" + "─".repeat(bottomLeft))}${fg(MUTED, prompt)}${fg(BORDER, "─".repeat(bottomRight) + "╯")}`,
     "",
   );
 

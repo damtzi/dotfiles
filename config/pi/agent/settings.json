@@ -1,15 +1,17 @@
 {
-  "lastChangelogVersion": "0.81.0",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-sol",
-  "defaultThinkingLevel": "medium",
-  "theme": "catppuccin-tui-mocha",
-  "hideThinkingBlock": false,
-  "packages": [
-    "npm:pi-web-access",
-    "npm:pi-terminal-theme",
-    "npm:pi-cursor-theme",
-    "npm:pi-catppuccin-tui",
-    "npm:pi-theme-flexoki"
-  ]
+    "lastChangelogVersion": "0.82.1",
+    "defaultProvider": "openai-codex",
+    "defaultModel": "gpt-5.6-sol",
+    "defaultThinkingLevel": "medium",
+    "theme": "catppuccin-tui-mocha",
+    "collapseChangelog": true,
+    "hideThinkingBlock": false,
+    "showHardwareCursor": true,
+    "packages": [
+        "npm:pi-web-access",
+        "npm:pi-terminal-theme",
+        "npm:pi-cursor-theme",
+        "npm:pi-catppuccin-tui",
+        "npm:pi-theme-flexoki"
+    ]
 }
