@@ -1,11 +1,14 @@
 {
-    "lastChangelogVersion": "0.82.1",
-    "defaultProvider": "openai-codex",
-    "defaultModel": "gpt-5.6-sol",
-    "defaultThinkingLevel": "medium",
-    "theme": "nightowl",
-    "collapseChangelog": true,
-    "hideThinkingBlock": false,
-    "showHardwareCursor": true,
-    "packages": ["npm:pi-web-access", "npm:@plannotator/pi-extension"]
+  "lastChangelogVersion": "0.83.0",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "medium",
+  "theme": "nightowl",
+  "collapseChangelog": true,
+  "hideThinkingBlock": false,
+  "showHardwareCursor": true,
+  "packages": [
+    "npm:pi-web-access",
+    "npm:@plannotator/pi-extension"
+  ]
 }
