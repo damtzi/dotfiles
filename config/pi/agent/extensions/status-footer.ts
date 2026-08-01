@@ -202,8 +202,11 @@ export default function statusFooter(pi: ExtensionAPI) {
         invalidate() {},
         render(width: number) {
           const directory = theme.fg("text", formatDirectory(ctx.cwd));
-          const location = git.branch
-            ? `${directory} ${theme.fg("muted", `· ${sanitizeLabel(git.branch)}`)}`
+          const locationDetails = [git.branch, pi.getSessionName()]
+            .filter((value): value is string => Boolean(value))
+            .map(sanitizeLabel);
+          const location = locationDetails.length > 0
+            ? `${directory} ${theme.fg("muted", `· ${locationDetails.join(" · ")}`)}`
             : directory;
           const modelLabel = model.provider
             ? [
@@ -253,6 +256,10 @@ export default function statusFooter(pi: ExtensionAPI) {
     });
 
     pi.events.emit(REFRESH_EVENT, undefined);
+  });
+
+  pi.on("session_info_changed", () => {
+    requestRender?.();
   });
 
   pi.on("session_shutdown", (_event, ctx) => {
