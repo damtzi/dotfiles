@@ -14,10 +14,11 @@ compact_subtitle = "working_directory"
 display_granularity = "tabs"
 view_mode = "expanded"
 enabled = true
+tab_item_mode = "focused_session"
 
 [appearance.themes]
 selected_system_themes = {
-  dark = { custom = { name = "Catppuccin Macchiato", path = "catppuccin-macchiato.yaml" } },
+  dark = { custom = { name = "Night Owl Dark", path = "night-owl-dark.yaml" } },
   light = { custom = { name = "One Light", path = "one-light.yaml" } },
 }
 system_theme = true
