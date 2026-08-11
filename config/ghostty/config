@@ -17,3 +17,5 @@ macos-titlebar-style = tabs
 shell-integration = zsh
 shell-integration-features = title
 shell-integration-features = no-cursor
+
+auto-update-channel = tip
