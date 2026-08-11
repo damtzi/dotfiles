@@ -52,6 +52,7 @@ link_file "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 
 # Amp
 mkdir -p "$HOME/.config/amp"
+link_file "$DOTFILES_DIR/config/amp/AGENTS.md" "$HOME/.config/amp/AGENTS.md"
 link_file "$DOTFILES_DIR/config/amp/settings.json" "$HOME/.config/amp/settings.json"
 
 # Ghostty
@@ -67,6 +68,10 @@ link_file "$DOTFILES_DIR/config/opencode" "$HOME/.config/opencode"
 mkdir -p "$HOME/.claude"
 link_file "$DOTFILES_DIR/config/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 link_file "$DOTFILES_DIR/config/claude/settings.json" "$HOME/.claude/settings.json"
+
+# Codex
+mkdir -p "$HOME/.codex"
+link_file "$DOTFILES_DIR/config/codex/AGENTS.md" "$HOME/.codex/AGENTS.md"
 
 # GitHub CLI
 link_file "$DOTFILES_DIR/config/gh" "$HOME/.config/gh"
@@ -114,6 +119,7 @@ fi
 # Pi configuration
 log_header "Pi Configuration"
 mkdir -p "$HOME/.pi/agent"
+link_file "$DOTFILES_DIR/config/pi/agent/AGENTS.md" "$HOME/.pi/agent/AGENTS.md"
 link_file "$DOTFILES_DIR/config/pi/agent/settings.json" "$HOME/.pi/agent/settings.json"
 link_file "$DOTFILES_DIR/config/pi/agent/themes" "$HOME/.pi/agent/themes"
 link_file "$DOTFILES_DIR/config/pi/agent/extensions" "$HOME/.pi/agent/extensions"

@@ -215,7 +215,13 @@ Global settings go in `git/.gitconfig` (tracked).
 
 ### AI Agent Instructions
 
-Shared instructions live in `AGENTS.md`. Claude Code loads them via `config/claude/CLAUDE.md`, which is linked to `~/.claude/CLAUDE.md`.
+Shared instructions live in the root `AGENTS.md`. Harness-specific files link to this master file:
+
+- Amp: `~/.config/amp/AGENTS.md`
+- Claude Code: `~/.claude/CLAUDE.md`
+- Codex: `~/.codex/AGENTS.md`
+- OpenCode: `~/.config/opencode/AGENTS.md`
+- Pi: `~/.pi/agent/AGENTS.md`
 
 ### Pi Themes
 
