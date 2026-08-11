@@ -28,7 +28,7 @@ projects/*/*
 !skills-cursor/
 !skills-cursor/**
 # User's personal skills
-!skills/
+!skills
 !skills/**
 # User's personal slash commands
 !commands/
