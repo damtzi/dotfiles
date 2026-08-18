@@ -1,14 +1,15 @@
 {
-  "lastChangelogVersion": "0.83.0",
+  "lastChangelogVersion": "0.84.2",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-sol",
-  "defaultThinkingLevel": "medium",
-  "theme": "nightowl",
+  "defaultThinkingLevel": "high",
+  "theme": "catppuccin-tui-macchiato",
   "collapseChangelog": true,
   "hideThinkingBlock": false,
   "showHardwareCursor": true,
   "packages": [
     "npm:pi-web-access",
-    "npm:@plannotator/pi-extension"
+    "npm:@plannotator/pi-extension",
+    "npm:pi-catppuccin-tui"
   ]
 }
