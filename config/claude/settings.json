@@ -54,7 +54,8 @@
   },
   "enabledPlugins": {
     "warp@claude-code-warp": true,
-    "paper-desktop@paper": true
+    "paper-desktop@paper": true,
+    "figma@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
@@ -68,9 +69,15 @@
         "source": "github",
         "repo": "paper-design/agent-plugins"
       }
+    },
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
     }
   },
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
   "inputNeededNotifEnabled": true,
