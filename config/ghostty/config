@@ -1,5 +1,5 @@
 # color scheme
-theme = dark:Night Owl,light:Flexoki Light
+theme = dark:Catppuccin Macchiato,light:Flexoki Light
 background-opacity = 1
 
 # font
@@ -12,6 +12,9 @@ cursor-style-blink = true
 
 # title bar
 macos-titlebar-style = tabs
+
+# icon
+macos-icon = official
 
 # shell
 shell-integration = zsh
