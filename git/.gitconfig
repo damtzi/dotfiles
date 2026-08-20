@@ -19,3 +19,6 @@
 # Include local config (user, email, signing key)
 [include]
 	path = ~/.gitconfig.local
+[user]
+	email = damian.tziamtzis@gmail.com
+	name = Damian Tziamtzis
