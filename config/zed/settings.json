@@ -2,13 +2,13 @@
     "icon_theme": "Material Icon Theme",
     "cli_default_open_behavior": "existing_window",
     "outline_panel": {
-        "dock": "right"
+        "dock": "right",
     },
     "collaboration_panel": {
-        "dock": "right"
+        "dock": "right",
     },
     "git_panel": {
-        "dock": "right"
+        "dock": "right",
     },
     "edit_predictions": {
         "provider": "zed",
@@ -28,25 +28,28 @@
     },
     "agent_servers": {
         "cursor": {
-            "type": "registry"
+            "type": "registry",
         },
         "amp-acp": {
-            "type": "registry"
+            "type": "registry",
         },
         "codex-acp": {
-            "type": "registry"
+            "type": "registry",
         },
         "opencode": {
-            "type": "registry"
+            "type": "registry",
         },
         "pi-acp": {
-            "type": "registry"
+            "type": "registry",
         },
+    },
+    "terminal": {
+        "font_family": "JetBrainsMono Nerd Font Mono",
     },
     "theme": {
         "mode": "system",
-        "dark": "Night Owl Dark",
-        "light": "Catppuccin Latte",
+        "dark": "Tokyo Night Storm",
+        "light": "One Light",
     },
     "autosave": {
         "after_delay": {
@@ -55,7 +58,7 @@
     },
     "format_on_save": "on",
     "tab_size": 4,
-    "buffer_font_family": ".ZedMono",
+    "buffer_font_family": "JetBrains Mono",
     "buffer_font_size": 13.0,
     "git": {
         "git_gutter": "tracked_files",
