@@ -3,13 +3,13 @@
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-sol",
   "defaultThinkingLevel": "high",
-  "theme": "catppuccin-tui-macchiato",
+  "theme": "light/github-dark-default",
   "collapseChangelog": true,
   "hideThinkingBlock": false,
   "showHardwareCursor": true,
   "packages": [
     "npm:pi-web-access",
     "npm:@plannotator/pi-extension",
-    "npm:pi-catppuccin-tui"
+    "npm:pi-subagents"
   ]
 }

@@ -18,7 +18,7 @@ tab_item_mode = "focused_session"
 
 [appearance.themes]
 selected_system_themes = {
-  dark = { custom = { name = "Catppuccin Macchiato", path = "catppuccin-macchiato.yaml" } },
+  dark = { custom = { name = "GitHub Dark Dimmed", path = "github-dark-dimmed.yaml" } },
   light = { custom = { name = "One Light", path = "one-light.yaml" } },
 }
 system_theme = true
