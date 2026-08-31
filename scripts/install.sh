@@ -64,6 +64,10 @@ link_file "$DOTFILES_DIR/config/zed" "$HOME/.config/zed"
 # OpenCode
 link_file "$DOTFILES_DIR/config/opencode" "$HOME/.config/opencode"
 
+# Herdr
+mkdir -p "$HOME/.config/herdr"
+link_file "$DOTFILES_DIR/config/herdr/config.toml" "$HOME/.config/herdr/config.toml"
+
 # Claude Code
 mkdir -p "$HOME/.claude"
 link_file "$DOTFILES_DIR/config/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
