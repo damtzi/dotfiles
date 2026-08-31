@@ -1,0 +1,103 @@
+onboarding = false
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+# --- Cobalt2 theme overrides (active) ---
+[theme.custom]
+panel_bg = "#132738"
+sidebar_bg = "#132738"
+active_row_bg = "#193549"
+selection_bg = "#1f4662"
+surface0 = "#1f4662"
+surface1 = "#294d64"
+surface_dim = "#3f5364"
+overlay0 = "#aaaaaa"
+overlay1 = "#aaaaaa"
+text = "#ffffff"
+subtext0 = "#aaaaaa"
+accent = "#ffc600"
+mauve = "#fb94ff"
+green = "#3ad900"
+yellow = "#ffc600"
+red = "#ff628c"
+blue = "#0088ff"
+teal = "#80fcff"
+peach = "#ff9d00"
+
+# --- Tokyo Night Storm theme overrides ---
+# [theme.custom]
+# panel_bg = "#1f2335"
+# sidebar_bg = "#1f2335"
+# active_row_bg = "#292e42"
+# selection_bg = "#364a82"
+# surface0 = "#292e42"
+# surface1 = "#414868"
+# surface_dim = "#1b1e2e"
+# overlay0 = "#565f89"
+# overlay1 = "#7982a9"
+# text = "#c0caf5"
+# subtext0 = "#a9b1d6"
+# accent = "#7aa2f7"
+# mauve = "#bb9af7"
+# green = "#9ece6a"
+# yellow = "#e0af68"
+# red = "#f7768e"
+# blue = "#7aa2f7"
+# teal = "#7dcfff"
+# peach = "#ff9e64"
+
+# --- GitHub Dark Dimmed theme overrides ---
+# [theme.custom]
+# panel_bg = "#1c2128"
+# sidebar_bg = "#1c2128"
+# active_row_bg = "#2d333b"
+# selection_bg = "#373e47"
+# surface0 = "#2d333b"
+# surface1 = "#373e47"
+# surface_dim = "#1c2128"
+# overlay0 = "#444c56"
+# overlay1 = "#636e7b"
+# text = "#adbac7"
+# subtext0 = "#768390"
+# accent = "#539bf5"
+# mauve = "#b083f0"
+# green = "#57ab5a"
+# yellow = "#c69026"
+# red = "#f47067"
+# blue = "#539bf5"
+# teal = "#39c5cf"
+# peach = "#f69d50"
+
+# --- GitHub Dark theme overrides ---
+# [theme.custom]
+# panel_bg = "#010409"
+# sidebar_bg = "#010409"
+# active_row_bg = "#161b22"
+# selection_bg = "#21262d"
+# surface0 = "#161b22"
+# surface1 = "#21262d"
+# surface_dim = "#010409"
+# overlay0 = "#30363d"
+# overlay1 = "#484f58"
+# text = "#e6edf3"
+# subtext0 = "#8b949e"
+# accent = "#58a6ff"
+# mauve = "#bc8cff"
+# green = "#3fb950"
+# yellow = "#d29922"
+# red = "#ff7b72"
+# blue = "#58a6ff"
+# teal = "#39c5cf"
+# peach = "#ffa657"
+
+[ui]
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = false
+
+[ui.sidebar.agents]
+row_gap = 1
+
+[ui.sidebar.spaces]
+row_gap = 1
