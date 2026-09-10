@@ -82,6 +82,8 @@ brew "python@3.11"
 brew "python@3.9"
 # Ruby version manager
 brew "rbenv"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Zsh prompt for Astronauts
 brew "spaceship"
 # Cross-shell prompt for astronauts
@@ -92,8 +94,6 @@ brew "tectonic"
 brew "telnet"
 # Watch files and take action when they change
 brew "watchman"
-# The AI coding agent built for the terminal.
-brew "anomalyco/tap/opencode", trusted: true
 # Supabase CLI
 brew "supabase/tap/supabase", trusted: true
 brew "tursodatabase/tap/turso", trusted: true
