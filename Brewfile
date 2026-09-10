@@ -106,6 +106,8 @@ cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# AI coding agent desktop client
+cask "opencode-desktop"
 # Control your tools with a few keystrokes
 cask "raycast"
 # System monitor for the menu bar
