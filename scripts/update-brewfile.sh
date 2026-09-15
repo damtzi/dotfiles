@@ -24,7 +24,7 @@ BREWFILE="$DOTFILES_DIR/Brewfile"
 log_info "Generating fresh Brewfile..."
 
 # Generate Brewfile
-brew bundle dump --force --describe --file="$BREWFILE"
+brew bundle dump --force --file="$BREWFILE"
 
 log_success "Brewfile updated at: $BREWFILE"
 log_info "Review the changes and commit them to your repo"
