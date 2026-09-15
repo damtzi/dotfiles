@@ -22,3 +22,6 @@ export PATH="$HOME/.local/bin:$PATH"
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
+
+# opencode
+export PATH=/Users/damitzi/.opencode/bin:$PATH
