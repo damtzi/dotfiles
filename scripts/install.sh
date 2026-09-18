@@ -47,6 +47,9 @@ log_header "XDG Configuration"
 # Ensure ~/.config exists
 mkdir -p "$HOME/.config"
 
+# Shared agent skills
+link_file "$DOTFILES_DIR/config/agents" "$HOME/.agents"
+
 # Starship
 link_file "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 
@@ -72,6 +75,7 @@ link_file "$DOTFILES_DIR/config/herdr/config.toml" "$HOME/.config/herdr/config.t
 mkdir -p "$HOME/.claude"
 link_file "$DOTFILES_DIR/config/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 link_file "$DOTFILES_DIR/config/claude/settings.json" "$HOME/.claude/settings.json"
+link_file "$DOTFILES_DIR/config/agents/skills" "$HOME/.claude/skills"
 
 # Codex
 mkdir -p "$HOME/.codex"
@@ -105,7 +109,12 @@ fi
 
 link_file "$DOTFILES_DIR/config/cursor/rules" "$HOME/.cursor/rules"
 link_file "$DOTFILES_DIR/config/cursor/commands" "$HOME/.cursor/commands"
-link_file "$DOTFILES_DIR/config/cursor/skills" "$HOME/.cursor/skills"
+
+# Cursor discovers shared skills through ~/.agents/skills. Remove the old,
+# repo-managed Cursor-specific skills link to avoid duplicate discovery.
+if [[ -L "$HOME/.cursor/skills" ]] && [[ "$(readlink "$HOME/.cursor/skills")" == "$DOTFILES_DIR/config/cursor/skills" ]]; then
+    rm "$HOME/.cursor/skills"
+fi
 
 # SSH config
 log_header "SSH Configuration"
@@ -127,7 +136,12 @@ link_file "$DOTFILES_DIR/config/pi/agent/AGENTS.md" "$HOME/.pi/agent/AGENTS.md"
 link_file "$DOTFILES_DIR/config/pi/agent/settings.json" "$HOME/.pi/agent/settings.json"
 link_file "$DOTFILES_DIR/config/pi/agent/themes" "$HOME/.pi/agent/themes"
 link_file "$DOTFILES_DIR/config/pi/agent/extensions" "$HOME/.pi/agent/extensions"
-link_file "$DOTFILES_DIR/config/agents/skills" "$HOME/.pi/agent/skills"
+
+# Pi discovers shared skills through ~/.agents/skills. Remove the old,
+# repo-managed Pi-specific skills link to avoid duplicate discovery.
+if [[ -L "$HOME/.pi/agent/skills" ]] && [[ "$(readlink "$HOME/.pi/agent/skills")" == "$DOTFILES_DIR/config/agents/skills" ]]; then
+    rm "$HOME/.pi/agent/skills"
+fi
 
 # Summary
 echo ""

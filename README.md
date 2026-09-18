@@ -152,7 +152,7 @@ source ~/.zshrc
 │   ├── gh/            # GitHub CLI config
 │   ├── pi/            # Pi coding agent config (themes/extensions)
 │   ├── amp/           # Amp configuration
-│   ├── agents/        # Shared agent skills
+│   ├── agents/        # Canonical shared agent skills
 │   ├── starship.toml  # Starship prompt config
 │   ├── ssh_config     # SSH config (no private keys)
 │   └── .yarnrc        # Yarn config
@@ -223,14 +223,21 @@ Shared instructions live in the root `AGENTS.md`. Harness-specific files link to
 - OpenCode: `~/.config/opencode/AGENTS.md`
 - Pi: `~/.pi/agent/AGENTS.md`
 
+### Shared Agent Skills
+
+`config/agents/skills/` is the single source of truth for globally installed skills.
+
+- `~/.agents` links to `config/agents/`, which is discovered by Amp, Codex, Cursor, OpenCode, and Pi
+- `~/.claude/skills` links to `config/agents/skills/` for compatibility
+- Amp's User Skills repository mirrors `config/agents/skills/` so the same skills are available in orbs
+
 ### Pi Themes
 
 Custom Pi themes live in `config/pi/agent/themes/` and are linked to `~/.pi/agent/themes/`.
 
-### Pi Extensions & Skills
+### Pi Extensions
 
 - Extensions live in `config/pi/agent/extensions/` and are linked to `~/.pi/agent/extensions/`
-- Shared skills live in `config/agents/skills/` and are linked to `~/.pi/agent/skills/`
 
 ### Environment Variables
 
