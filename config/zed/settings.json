@@ -13,7 +13,7 @@
     "edit_predictions": {
         "provider": "zed",
     },
-    "disable_ai": false,
+    "disable_ai": true,
     "project_panel": {
         "dock": "right",
     },
@@ -48,7 +48,7 @@
     },
     "theme": {
         "mode": "system",
-        "dark": "GitHub Dark Dimmed",
+        "dark": "Cobalt",
         "light": "One Light",
     },
     "autosave": {
