@@ -231,10 +231,6 @@ Shared instructions live in the root `AGENTS.md`. Harness-specific files link to
 - `~/.claude/skills` links to `config/agents/skills/` for compatibility
 - Amp's User Skills repository mirrors `config/agents/skills/` so the same skills are available in orbs
 
-### Pi Themes
-
-Custom Pi themes live in `config/pi/agent/themes/` and are linked to `~/.pi/agent/themes/`.
-
 ### Pi Extensions
 
 - Extensions live in `config/pi/agent/extensions/` and are linked to `~/.pi/agent/extensions/`
