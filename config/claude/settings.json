@@ -1,5 +1,5 @@
 {
-  "model": "claude-fable-5[1m]",
+  "model": "sonnet",
   "hooks": {
     "PostToolUse": [
       {
@@ -34,7 +34,22 @@
         ]
       }
     ],
-    "SessionStart": [{"matcher":"^(startup|resume|clear|compact|fork)$","hooks":[{"type":"command","command":"bash '/Users/damitzi/.claude/hooks/herdr-agent-state.sh' session","timeout":10}]}]
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/damitzi/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
   },
   "disableArtifact": true,
   "statusLine": {
@@ -43,8 +58,7 @@
   },
   "enabledPlugins": {
     "warp@claude-code-warp": true,
-    "paper-desktop@paper": true,
-    "figma@claude-plugins-official": true
+    "paper-desktop@paper": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
@@ -67,6 +81,11 @@
     }
   },
   "effortLevel": "high",
+  "modelSettings": {
+    "claude-sonnet-5-5": {
+      "effortLevel": "medium"
+    }
+  },
   "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
   "inputNeededNotifEnabled": true,
