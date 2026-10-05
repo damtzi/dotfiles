@@ -1,5 +1,9 @@
 {
-  "model": "sonnet",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "model": "opus",
   "hooks": {
     "PostToolUse": [
       {
@@ -46,10 +50,6 @@
         ]
       }
     ]
-  },
-  "attribution": {
-    "commit": "",
-    "pr": ""
   },
   "disableArtifact": true,
   "statusLine": {
