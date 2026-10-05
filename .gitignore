@@ -42,3 +42,6 @@ shell/zsh/local.zsh
 
 # Node modules (if any)
 node_modules/
+
+# Claude Code synced account skills (generated)
+config/agents/skills/synced/
