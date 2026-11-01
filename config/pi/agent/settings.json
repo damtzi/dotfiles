@@ -10,6 +10,7 @@
   "packages": [
     "npm:pi-web-access",
     "npm:@plannotator/pi-extension",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "https://github.com/earendil-works/pi-claude-code"
   ]
 }
